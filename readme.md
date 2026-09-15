@@ -1,121 +1,143 @@
-# 👋 Hi, I'm Chungu Kapambwe
+# Chungu Kapambwe — Portfolio
 
-### Business & Financial Data Analyst | Business Intelligence Specialist
+**Evidence over Opinion**
 
-<div align="center">
-  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chungu-kapambwe-214877257/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://github.com/Chungu365)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:Chungukapambwe.ck@gmail.com)
+A single-page portfolio for financial and data analysis work: the services I
+deliver, the case studies that prove them, and links through to every
+repository behind them. Static HTML — no framework, no build step, nothing to
+install.
 
-</div>
+**Live site:** https://chungu365.github.io/Portfolio-Website/
 
----
-
-## 🚀 About Me
-
-I'm an analytical and detail-oriented data professional passionate about transforming complex financial and business data into **actionable insights** that drive strategic decision-making. I bridge the gap between raw data and business strategy, delivering innovative solutions that optimize performance and fuel sustainable growth.
-
-- 🔭 Currently working on advanced SQL and Python analytics projects
-- 🌱 Expanding my expertise in machine learning and predictive modeling
-- 💡 Love creating interactive dashboards and data visualizations
-- 📊 Specialize in financial modeling and business intelligence
-- 🎯 Goal: Help businesses make data-driven decisions with confidence
+> **This repository is the complete site.** Everything needed to run, edit,
+> rebuild or redeploy it is committed here, including the full-resolution
+> source portrait the two cropped images are cut from. Clone it and you have
+> the whole thing back — there is no separate local project to lose.
 
 ---
 
-## 🛠️ Technical Skills
+## What's on the page
 
-### Languages & Tools
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+| Section | What it covers |
+| --- | --- |
+| **Hero** | Positioning, credentials, and the two calls to action |
+| **Services** | Financial modelling and valuation, Power BI and dashboards, data analysis and reporting, decision-support tools — each naming the project that proves it |
+| **Case studies** | The Global Electronics Retailer dashboard as the featured build, plus six projects linking out to their repositories |
+| **About** | Background, certifications, and where I work from |
+| **Capabilities** | The three disciplines and the toolkit behind them |
+| **Contact** | Email, LinkedIn, GitHub |
 
-### Data Visualization
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=python&logoColor=white)
-![ggplot2](https://img.shields.io/badge/ggplot2-276DC3?style=for-the-badge&logo=r&logoColor=white)
+## Case studies linked from the site
 
-### Core Competencies
+| Project | Where it goes |
+| --- | --- |
+| Global Electronics Retailer — Power BI Dashboard | [PowerBI-Global-Electronics-Retailer-Dashboard](https://github.com/Chungu365/PowerBI-Global-Electronics-Retailer-Dashboard) |
+| Business Performance Diagnostic | [Business-Performance-Diagnostic-Report](https://github.com/Chungu365/Business-Performance-Diagnostic-Report) |
+| Blu Containers — DCF Valuation | [Blu-Container-Financial-Model](https://github.com/Chungu365/Blu-Container-Financial-Model) |
+| Fund Growth Illustrator | [Wealth-Calculator-](https://github.com/Chungu365/Wealth-Calculator-) |
+| Statistical Exploration in R | [Data-Analyst-Project-Portfolio](https://github.com/Chungu365/Data-Analyst-Project-Portfolio) |
+| Tableau Visualisations | [Tableau Public](https://public.tableau.com/app/profile/chungu.kapambwe/vizzes) |
+
+## Structure
+
 ```
-📊 Data Analysis & Visualization    🔍 Exploratory Data Analysis
-💰 Financial Modeling               📈 Business Intelligence
-🧹 Data Cleaning & Preparation      📉 Statistical Analysis
-💡 Strategic Insights               🎯 Dashboard Development
+.
+├── index.html                      # The whole site: markup, styles, script
+├── readme.md
+├── .gitignore
+├── .nojekyll                       # Serve files as-is on GitHub Pages
+└── assets/
+    ├── css/
+    │   └── fontawesome.min.css     # Font Awesome 5 Free, woff2 only
+    ├── fonts/
+    │   ├── fa-brands-400.woff2
+    │   ├── fa-regular-400.woff2
+    │   └── fa-solid-900.woff2
+    └── img/
+        ├── avatar.jpg              # Hero portrait (circular crop)
+        ├── profile-about.jpg       # About section portrait
+        ├── project-powerbi.jpg     # Featured case study screenshot
+        └── portrait-source.jpg     # Full-resolution original the crops come from
 ```
 
----
+Eleven files. Roughly 1 MB.
 
-## 💼 Featured Projects
+## How it's built
 
-### 📌 [Global Layoffs Analysis - SQL](https://github.com/Chungu365/Data-Analyst-Project-Portfolio/tree/main/World_layoffs_analysis)
-**Data Cleaning & Exploratory Analysis**
-- Cleaned and standardized global layoff dataset with 2,000+ records
-- Removed duplicates, handled null values, and normalized data
-- Performed comprehensive EDA to identify industry trends and patterns
-- **Tech Stack:** SQL, MySQL
+- Plain HTML and CSS custom properties. One file, no framework, no build step.
+- **Fraunces** for headings and **Manrope** for body text, loaded from Google Fonts.
+- **Font Awesome 5 Free** for interface icons, self-hosted in `assets/fonts/`.
+- Project cover art is drawn as **inline SVG**, so it stays sharp at any size
+  and recolours itself with the theme instead of shipping as fixed images.
+- **Light by default.** Dark mode follows the operating system, and the toggle
+  in the header overrides it either way. The choice is remembered between visits.
+- Responsive to roughly 390px wide, keyboard-navigable, and honours
+  `prefers-reduced-motion`.
 
-### 📌 [Palmer Penguins Exploration - R](https://github.com/Chungu365/Data-Analyst-Project-Portfolio/tree/5853b3aeea745d59d133114bc98a9d5a5f228aa8/palmer%20penguins%20exploration)
-**Statistical Analysis & Visualization**
-- Analyzed penguin morphology across three Antarctic species
-- Created publication-ready visualizations using ggplot2
-- Conducted correlation analysis and hypothesis testing
-- **Tech Stack:** R, RStudio, ggplot2, dplyr
+### Colour tokens
 
-### 📌 [Interactive Tableau Dashboards](https://public.tableau.com/app/profile/chungu.kapambwe/vizzes)
-**Business Intelligence Visualizations**
-- Developed interactive dashboards transforming complex datasets
-- Created KPI tracking systems for business performance monitoring
-- Designed user-friendly interfaces for non-technical stakeholders
-- **Tech Stack:** Tableau, SQL
+Defined once in the `:root` block at the top of the stylesheet. Changing a value
+there updates every component that uses it.
 
----
+| Token | Light | Dark | Used for |
+| --- | --- | --- | --- |
+| `--brand` | `#0e6e9b` | `#0e6e9b` | Monogram and contact panel — fixed in both themes |
+| `--blue` | `#0e6e9b` | `#4fb2da` | Links, icons, accents |
+| `--surface` | `#ffffff` | `#0f1720` | Page background |
+| `--surface-alt` | `#e2e5e9` | `#141e29` | Alternating section bands |
+| `--ink` | `#12212b` | `#eef2f5` | Body text |
+| `--accent-warm` | `#b8860b` | `#d8ab3a` | The single warm note in each illustration |
 
-## 📊 GitHub Stats
+## Running it locally
 
-<div align="center">
-  
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Chungu365&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00D4FF&icon_color=7C3AED&text_color=FFFFFF)
+Open `index.html` in a browser — that is the whole workflow.
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Chungu365&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=00D4FF&text_color=FFFFFF)
+To serve it over HTTP instead, which matches how GitHub Pages behaves:
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Chungu365&theme=radical&hide_border=true&background=0D1117&ring=00D4FF&fire=7C3AED&currStreakLabel=FFFFFF)
+```bash
+python -m http.server 8000
+# then open http://localhost:8000
+```
 
-</div>
+## Deploying
 
----
+The site is served by GitHub Pages straight from the repository root.
 
-## 🎓 Continuous Learning
+1. Make sure `index.html` sits at the **root of the repository**, not inside a
+   subfolder. If you upload through the GitHub web interface, drag the
+   *contents* of this folder, not the folder itself.
+2. Push to `main`.
+3. Go to **Settings → Pages → Build and deployment**.
+4. Set **Source** to *Deploy from a branch*, **Branch** to `main`, and
+   **Folder** to `/ (root)`.
 
-I'm constantly expanding my skill set and staying current with industry trends:
+`.nojekyll` tells Pages to serve the files exactly as committed rather than
+running them through Jekyll.
 
-- 📚 Advanced Machine Learning techniques
-- 🤖 AI-powered analytics and automation
-- 📊 Advanced statistical modeling
-- 🔐 Data privacy and security best practices
-- ☁️ Cloud-based data solutions (AWS, Azure)
+## Making changes
 
----
+Everything lives in `index.html`, in numbered and labelled sections:
 
-## 🤝 Let's Connect!
+- **Design tokens** — the `:root` block at the top of `<style>`. Colours,
+  radii, and the header height are all set here.
+- **Services** — `<section id="services">`. Each offering is one `<article class="service">`.
+- **Case studies** — `<section id="work">`. The featured build is
+  `.case-featured`; every other project is one `<article class="case">` with its
+  illustration inline as SVG directly above the copy.
+- **About, capabilities, contact** — their own `id`-labelled sections.
+- **Behaviour** — the single `<script>` at the bottom: theme toggle, mobile
+  menu, scroll-spy, and the scroll reveal.
 
-I'm always interested in collaborating on data-driven projects or discussing opportunities in business analytics and financial modeling. Feel free to reach out!
+## Credits
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/chungu-kapambwe-214877257/)
-- 📧 [Email](mailto:Chungukapambwe.ck@gmail.com)
-- 🌐 Location: Lusaka, Zambia
-- 📞 Phone: (123) 456-7890
+- Icons — [Font Awesome 5 Free](https://fontawesome.com): icons under CC BY 4.0,
+  fonts under SIL OFL 1.1, code under MIT.
+- Typefaces — [Fraunces](https://fonts.google.com/specimen/Fraunces) and
+  [Manrope](https://fonts.google.com/specimen/Manrope), both SIL OFL 1.1.
+- Layout, illustrations, and copy are my own.
 
----
+## Contact
 
-<div align="center">
-
-### 💡 "Turning data into decisions, insights into impact"
-
-![Visitor Count](https://komarev.com/ghpvc/?username=Chungu365&color=00D4FF&style=for-the-badge)
-
-⭐️ From [Chungu365](https://github.com/Chungu365)
-
-</div>
+- **Email** — Chungukapambwe.ck@gmail.com
+- **LinkedIn** — [chungu-kapambwe](https://www.linkedin.com/in/chungu-kapambwe-214877257/)
+- **GitHub** — [@Chungu365](https://github.com/Chungu365)
