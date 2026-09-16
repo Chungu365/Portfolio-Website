@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Work | Chungu Kapambwe</title>
+<meta name="description" content="Selected financial and analytical builds, with the capabilities and toolkit behind them.">
+<meta name="theme-color" content="#0e6e9b">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e6e9b'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='bold' fill='white' text-anchor='middle'%3ECK%3C/text%3E%3C/svg%3E">
+
+<script>
+/* Set theme + js flag before first paint: avoids a flash and keeps content
+     visible if scripting is unavailable. */
+  (function () {
+    var r = document.documentElement;
+    r.className += ' js';
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') r.setAttribute('data-theme', t);
+    } catch (e) {}
+    try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="wordmark" aria-label="Chungu Kapambwe, home">
+      <span class="mono" aria-hidden="true">CK</span>
+      <span>
+        <span class="name">Chungu Kapambwe</span>
+        <span class="role">Financial &amp; Data Analyst</span>
+      </span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html" class="is-active">My Work</a></li>
+      <li><a href="experience.html">Experience</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme" aria-pressed="false">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+        <i class="fas fa-sun" aria-hidden="true"></i>
+      </button>
+      <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Get in Touch</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="work.html" class="is-active">My Work</a>
+  <a href="experience.html">Experience</a>
+  <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+</div>
+
+<main id="top">
+<section class="page-head wrap" data-animate>
+  <span class="eyebrow">Selected work</span>
+  <h1>My Work</h1>
+  <p>Real builds, with the outputs they produced. Every one links through to the full repository,
+     followed by the capabilities and the toolkit behind them.</p>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+
+    <article class="case-featured" data-animate>
+      <div class="case-shot">
+        <img src="assets/img/project-powerbi.jpg" alt="Revenue Overview page of the Global Electronics Retailer Power BI dashboard" width="1600" height="917" loading="lazy">
+      </div>
+      <div class="case-body">
+        <div>
+          <span class="badge"><i class="fas fa-star" aria-hidden="true"></i> Featured</span>
+          <h3>Global Electronics Retailer Power BI Dashboard</h3>
+          <p>
+            An end to end build. Raw CSV and Excel exports turned into a star schema semantic model
+            with DAX measures, then surfaced as a four page interactive report covering revenue,
+            products, customers and stores. A shared filter panel and a click to drill month selector
+            let any view be sliced to a single country, category or month in a couple of clicks.
+          </p>
+          <div class="stack"><span>Power BI</span><span>DAX</span><span>Data Modelling</span><span>Excel</span></div>
+          <a class="case-link" href="https://github.com/Chungu365/PowerBI-Global-Electronics-Retailer-Dashboard" target="_blank" rel="noopener">
+            View the full project <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="metrics">
+          <div class="metric"><strong>62,884</strong><span>order lines modelled, 2016 to 2021</span></div>
+          <div class="metric"><strong>50.2%</strong><span>blended gross margin surfaced</span></div>
+          <div class="metric"><strong>66 stores, 8 countries</strong><span>covered in one filterable model</span></div>
+        </div>
+      </div>
+    </article>
+
+    <div class="case-grid">
+      <article class="case" data-animate>
+        <div class="shot"><img src="assets/img/case-diagnostic.jpg" alt="Page two of the analytical report, revenue by quarter with the 2020 decline marked" width="1400" height="875" loading="lazy"></div>
+        <div class="body">
+          <h3>Business Performance Diagnostic</h3>
+          <p>A nine section written analysis off the same model as the dashboard. Finding first, then
+             the evidence, then the action. Isolates a 48.7% revenue fall as a demand shock rather than
+             a pricing one, and closes with five costed moves.</p>
+          <div class="stack"><span>Diagnostic Analysis</span><span>Reporting</span><span>Power BI</span></div>
+          <a class="case-link" href="https://github.com/Chungu365/Business-Performance-Diagnostic-Report" target="_blank" rel="noopener">
+            Read the report <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="case" data-animate>
+        <div class="shot"><img src="assets/img/case-dcf.jpg" alt="Cover sheet of the Blu Containers discounted cash flow valuation model" width="1400" height="875" loading="lazy"></div>
+        <div class="body">
+          <h3>Blu Containers DCF Valuation</h3>
+          <p>A five year integrated three statement model with a scenario engine, valued on an exit
+             multiple DCF. Implied value of $12.25 a share against an $11.50 market price, a 6.5%
+             premium.</p>
+          <div class="stack"><span>Excel</span><span>DCF</span><span>Scenario Analysis</span></div>
+          <a class="case-link" href="https://github.com/Chungu365/Blu-Container-Financial-Model" target="_blank" rel="noopener">
+            View the model <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="case" data-animate>
+        <div class="shot"><img src="assets/img/case-fund.jpg" alt="Cover reading Compound Interest, a decision support tool for scenario based projections" width="1400" height="875" loading="lazy"></div>
+        <div class="body">
+          <h3>Compound Interest Calculator</h3>
+          <p>A decision support tool for individual life products. Three return scenarios, fee adjusted
+             net contributions and a year by year output schedule that makes compounding legible to a
+             client.</p>
+          <div class="stack"><span>JavaScript</span><span>Chart.js</span><span>Financial Modelling</span></div>
+          <a class="case-link" href="https://github.com/Chungu365/Wealth-Calculator-" target="_blank" rel="noopener">
+            View the tool <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="case" data-animate>
+        <div class="shot"><img src="assets/img/case-rstudio.jpg" alt="RStudio" width="1400" height="875" loading="lazy"></div>
+        <div class="body">
+          <h3>Statistical Exploration in R</h3>
+          <p>Analysis of the Palmer Penguins dataset. Relationships between variables, missing value
+             checks and summary statistics, visualised with ggplot2 in RStudio.</p>
+          <div class="stack"><span>R</span><span>ggplot2</span><span>dplyr</span></div>
+          <a class="case-link" href="https://github.com/Chungu365/Data-Analyst-Project-Portfolio" target="_blank" rel="noopener">
+            View the project <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="case" data-animate>
+        <div class="shot"><img src="assets/img/case-tableau.jpg" alt="Tableau" width="1400" height="875" loading="lazy"></div>
+        <div class="body">
+          <h3>Tableau Visualisations</h3>
+          <p>A public collection of interactive dashboards and KPI views, built to make complex
+             datasets readable for a business audience.</p>
+          <div class="stack"><span>Tableau</span><span>SQL</span></div>
+          <a class="case-link" href="https://public.tableau.com/app/profile/chungu.kapambwe/vizzes" target="_blank" rel="noopener">
+            View on Tableau Public <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="case" data-animate>
+        <div class="shot"><img src="assets/img/case-repo.jpg" alt="Cover reading Portfolio, every build in one place, six repositories" width="1400" height="875" loading="lazy"></div>
+        <div class="body">
+          <h3>Full Project Repository</h3>
+          <p>Every build in one place. Financial models, dashboards, SQL and R analysis, kept current
+             as new work is completed.</p>
+          <div class="stack"><span>GitHub</span></div>
+          <a class="case-link" href="https://github.com/Chungu365?tab=repositories" target="_blank" rel="noopener">
+            Browse all repositories <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="capabilities" aria-labelledby="cap-title">
+  <div class="wrap">
+    <div class="section-head" data-animate>
+      <span class="eyebrow">Expertise</span>
+      <h2 id="cap-title">Capabilities</h2>
+      <p>Three disciplines, one habit. Find the number that matters, then make it impossible to misread.</p>
+    </div>
+
+    <div class="cap-grid">
+      <div class="cap" data-animate>
+        <span class="ico"><i class="fas fa-chart-bar" aria-hidden="true"></i></span>
+        <h3>Data and Analytics</h3>
+        <p>Cleaning, structuring and interrogating data in Excel, SQL, Python and R. Statistical
+           analysis, forecasting and reporting that stands up to scrutiny.</p>
+      </div>
+      <div class="cap" data-animate>
+        <span class="ico"><i class="fas fa-coins" aria-hidden="true"></i></span>
+        <h3>Financial Analysis</h3>
+        <p>Financial statement analysis, valuation and quantitative technique. Ratio analysis, cash
+           flow modelling and equity and fixed income fundamentals.</p>
+      </div>
+      <div class="cap" data-animate>
+        <span class="ico"><i class="fas fa-lightbulb" aria-hidden="true"></i></span>
+        <h3>Business Intelligence</h3>
+        <p>Semantic models, DAX and executive reporting, plus the stakeholder work that turns a
+           finished report into a decision that actually gets made.</p>
+      </div>
+    </div>
+
+    <div class="toolkit" data-animate>
+      <h4>Toolkit</h4>
+      <div class="tags">
+        <span>Excel (Advanced)</span><span>Power BI</span><span>SQL</span><span>Python</span>
+        <span>R</span><span>Tableau</span><span>DAX</span><span>Jira</span><span>Jupyter</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap closer" data-animate>
+    <h2>Where this experience comes from.</h2>
+    <p>Four years of analytical work across insurance, media and financial reporting.</p>
+    <a href="experience.html" class="btn btn-primary">See my experience <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="wordmark" aria-label="Chungu Kapambwe, home">
+        <span class="mono" aria-hidden="true">CK</span>
+        <span>
+          <span class="name">Chungu Kapambwe</span>
+          <span class="role">Financial &amp; Data Analyst</span>
+        </span>
+      </a>
+      <span class="footer-tagline">Evidence over Opinion</span>
+    </div>
+    <p class="footer-meta">&copy; <span id="year">2026</span> Chungu Kapambwe &middot; Lusaka, Zambia</p>
+    <div class="footer-social">
+      <a href="mailto:Chungukapambwe.ck@gmail.com" aria-label="Email"><i class="far fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/chungu-kapambwe-214877257/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+      <a href="https://github.com/Chungu365" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

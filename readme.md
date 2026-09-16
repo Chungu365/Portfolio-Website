@@ -2,10 +2,9 @@
 
 **Evidence over Opinion**
 
-A single-page portfolio for financial and data analysis work: the services I
-deliver, the case studies that prove them, and links through to every
-repository behind them. Static HTML — no framework, no build step, nothing to
-install.
+A five page portfolio for financial and data analysis work. Home and about,
+services, selected work, career experience, and contact. Static HTML with no
+framework, no build step and nothing to install.
 
 **Live site:** https://chungu365.github.io/Portfolio-Website/
 
@@ -16,16 +15,20 @@ install.
 
 ---
 
-## What's on the page
+## Pages
 
-| Section | What it covers |
+| Page | What it covers |
 | --- | --- |
-| **Hero** | Positioning, credentials, and the two calls to action |
-| **Services** | Financial modelling and valuation, Power BI and dashboards, data analysis and reporting, decision-support tools — each naming the project that proves it |
-| **Case studies** | The Global Electronics Retailer dashboard as the featured build, plus six projects linking out to their repositories |
-| **About** | Background, certifications, and where I work from |
-| **Capabilities** | The three disciplines and the toolkit behind them |
-| **Contact** | Email, LinkedIn, GitHub |
+| `index.html` | **Home.** Centred introduction, positioning line, and the about section with certifications and location. |
+| `services.html` | **Services.** Financial modelling and valuation, Power BI and dashboards, data analysis and reporting, decision support tools. Each names the project that proves it. |
+| `work.html` | **My Work.** The featured Power BI build, six case studies, then capabilities and the toolkit. |
+| `experience.html` | **Experience.** Career timeline, education, certifications. |
+| `contact.html` | **Get in Touch.** Email, LinkedIn, GitHub. |
+
+Every page carries the same header, navigation and footer. The navigation marks
+the current page with `class="is-active"`, set in the markup rather than by
+script. Each page ends with a link through to the next one, so the site reads
+in order: Home, Services, My Work, Experience, Get in Touch.
 
 ## Case studies linked from the site
 
@@ -34,7 +37,7 @@ install.
 | Global Electronics Retailer — Power BI Dashboard | [PowerBI-Global-Electronics-Retailer-Dashboard](https://github.com/Chungu365/PowerBI-Global-Electronics-Retailer-Dashboard) |
 | Business Performance Diagnostic | [Business-Performance-Diagnostic-Report](https://github.com/Chungu365/Business-Performance-Diagnostic-Report) |
 | Blu Containers — DCF Valuation | [Blu-Container-Financial-Model](https://github.com/Chungu365/Blu-Container-Financial-Model) |
-| Fund Growth Illustrator | [Wealth-Calculator-](https://github.com/Chungu365/Wealth-Calculator-) |
+| Compound Interest Calculator | [Wealth-Calculator-](https://github.com/Chungu365/Wealth-Calculator-) |
 | Statistical Exploration in R | [Data-Analyst-Project-Portfolio](https://github.com/Chungu365/Data-Analyst-Project-Portfolio) |
 | Tableau Visualisations | [Tableau Public](https://public.tableau.com/app/profile/chungu.kapambwe/vizzes) |
 
@@ -42,13 +45,20 @@ install.
 
 ```
 .
-├── index.html                      # The whole site: markup, styles, script
+├── index.html                      # Home and about
+├── services.html
+├── work.html
+├── experience.html
+├── contact.html
 ├── readme.md
 ├── .gitignore
 ├── .nojekyll                       # Serve files as-is on GitHub Pages
 └── assets/
     ├── css/
+    │   ├── site.css                # The whole design system, shared by all pages
     │   └── fontawesome.min.css     # Font Awesome 5 Free, woff2 only
+    ├── js/
+    │   └── site.js                 # Theme toggle, mobile menu, scroll reveal
     ├── fonts/
     │   ├── fa-brands-400.woff2
     │   ├── fa-regular-400.woff2
@@ -56,19 +66,30 @@ install.
     └── img/
         ├── avatar.jpg              # Hero portrait (circular crop)
         ├── profile-about.jpg       # About section portrait
+        ├── portrait-source.jpg     # Full resolution original the crops come from
         ├── project-powerbi.jpg     # Featured case study screenshot
-        └── portrait-source.jpg     # Full-resolution original the crops come from
+        ├── case-diagnostic.jpg     # Card cover, analytical report page 2
+        ├── case-dcf.jpg            # Card cover, DCF model cover sheet
+        ├── case-rstudio.jpg        # Card cover, RStudio
+        ├── case-tableau.jpg        # Card cover, Tableau
+        ├── case-fund.jpg           # Card cover, Compound Interest Calculator
+        └── case-repo.jpg           # Card cover, "Portfolio"
 ```
 
-Eleven files. Roughly 1 MB.
+Styles and behaviour live in one place each. Editing `assets/css/site.css`
+changes every page at once, and the same is true of `assets/js/site.js`.
+
+Every card cover is a 16:10 JPEG in `assets/img/`, sized 1400 by 875 and run
+edge to edge in its card. Swapping one is just dropping a new image in at the
+same filename. Four covers are real work (a report page, a model cover sheet,
+and the two tool marks); the Compound Interest and Portfolio covers are
+typographic panels built from the site's own palette and typefaces.
 
 ## How it's built
 
 - Plain HTML and CSS custom properties. One file, no framework, no build step.
 - **Fraunces** for headings and **Manrope** for body text, loaded from Google Fonts.
 - **Font Awesome 5 Free** for interface icons, self-hosted in `assets/fonts/`.
-- Project cover art is drawn as **inline SVG**, so it stays sharp at any size
-  and recolours itself with the theme instead of shipping as fixed images.
 - **Light by default.** Dark mode follows the operating system, and the toggle
   in the header overrides it either way. The choice is remembered between visits.
 - Responsive to roughly 390px wide, keyboard-navigable, and honours
@@ -116,17 +137,18 @@ running them through Jekyll.
 
 ## Making changes
 
-Everything lives in `index.html`, in numbered and labelled sections:
+- **Colours, spacing, type** live in the `:root` block at the top of
+  `assets/css/site.css`. Changing a token there updates every page.
+- **Copy and structure** live in the page each section belongs to. Services are
+  `<article class="service">` blocks, case studies are `<article class="case">`,
+  and each role on the experience page is an `<article class="job">`.
+- **Navigation** is the `<ul class="nav-links">` in every page header, repeated
+  in `.mobile-menu`. Adding a page means adding a link to both in all five files.
+- **Behaviour** is `assets/js/site.js`: theme toggle, mobile menu and the scroll
+  reveal.
 
-- **Design tokens** — the `:root` block at the top of `<style>`. Colours,
-  radii, and the header height are all set here.
-- **Services** — `<section id="services">`. Each offering is one `<article class="service">`.
-- **Case studies** — `<section id="work">`. The featured build is
-  `.case-featured`; every other project is one `<article class="case">` with its
-  illustration inline as SVG directly above the copy.
-- **About, capabilities, contact** — their own `id`-labelled sections.
-- **Behaviour** — the single `<script>` at the bottom: theme toggle, mobile
-  menu, scroll-spy, and the scroll reveal.
+A note on the writing: the site copy deliberately avoids dashes and hyphens.
+Keep new copy in the same voice, plain and direct.
 
 ## Credits
 
