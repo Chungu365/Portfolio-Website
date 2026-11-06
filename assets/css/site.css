@@ -394,6 +394,18 @@
   .case .case-link{ margin-top:auto; padding-top:1.1rem; }
   .case-all{ margin-top:2.4rem; display:flex; justify-content:center; }
 
+  /* Full-width closing card: image keeps one column's width so it lines up
+     with the grid above, text sits beside it. Stacks again on small screens. */
+  .case-wide{ grid-column:1 / -1; flex-direction:row; }
+  .case-wide .shot{
+    flex:0 0 calc((100% - 3.2rem) / 3);
+    border-bottom:0; border-right:1px solid var(--line);
+  }
+  .case-wide .shot img{ height:100%; }
+  .case-wide .body{ justify-content:center; padding:1.8rem 2.2rem; }
+  .case-wide .case-link{ margin-top:0; padding-top:1.1rem; }
+  .case-wide p{ max-width:56ch; }
+
   /* ===================================================================
      9. ABOUT + CREDENTIALS
      =================================================================== */
@@ -575,6 +587,7 @@
     .nav-links, .nav-cta{ display:none; }
     .menu-btn{ display:flex; }
     .service-grid, .cap-grid, .case-grid{ grid-template-columns:repeat(2,1fr); }
+    .case-wide .shot{ flex-basis:calc((100% - 1.6rem) / 2); }
     .case-body{ grid-template-columns:1fr; gap:1.6rem; }
     .metrics{ grid-template-columns:repeat(3,1fr); display:grid; }
     .about-grid{ grid-template-columns:1fr; }
@@ -588,6 +601,10 @@
     .job .when{ margin-left:0; width:100%; }
     .tagline::after{ display:none; }
     .service-grid, .cap-grid, .case-grid, .creds{ grid-template-columns:1fr; }
+    .case-wide{ flex-direction:column; }
+    .case-wide .shot{ flex-basis:auto; border-right:0; border-bottom:1px solid var(--line); }
+    .case-wide .shot img{ height:auto; }
+    .case-wide .body{ padding:1.5rem 1.6rem 1.7rem; }
     .metrics{ grid-template-columns:1fr; }
     .toolkit{ flex-direction:column; align-items:flex-start; gap:1rem; }
     .wordmark .role{ display:none; }
